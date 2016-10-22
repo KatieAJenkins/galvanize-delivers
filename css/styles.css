@@ -27,15 +27,21 @@ h1 {
 
 .Menu {
   background-color: blue;
+
 }
 
 .Order {
-  background-color: red;
+  background-color:;
 }
 
 .food {
   border: 1px grey solid;
-  background-color: red;
+  background-color: yellow;
 }
 
-.img
+.totals {
+  height: 150px;
+  width: 150px;
+  float: right;
+
+}
