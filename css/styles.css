@@ -30,13 +30,12 @@ h1 {
 
 }
 
-.Order {
-  background-color:;
+.order {
+  background-color: yellow;
 }
 
 .food {
   border: 1px grey solid;
-  background-color: yellow;
 }
 
 .totals {
