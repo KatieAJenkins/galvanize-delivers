@@ -25,8 +25,17 @@ h1 {
   color: #337ab7;
 }
 
-.burger {
+.Menu {
+  background-color: blue;
+}
+
+.Order {
+  background-color: red;
+}
+
+.food {
   border: 1px grey solid;
+  background-color: red;
 }
 
 .img
