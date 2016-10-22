@@ -40,3 +40,22 @@ h1 {
   width: 150px;
   float: right;
 }
+#food1 {
+  background-color: yellow;
+}
+
+#food2 {
+  background-color: green;
+}
+
+#food3 {
+  background-color: brown;
+}
+
+#food4 {
+  background-color: purple;
+}
+
+#galvanize {
+  font-size: 15px;
+}
