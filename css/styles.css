@@ -32,7 +32,7 @@ h1 {
 }
 
 .order {
-  background-color: yellow;
+  background-color: brown;
 }
 
 .totals {
@@ -40,19 +40,19 @@ h1 {
   width: 150px;
   float: right;
 }
-#food1 {
+#royale {
   background-color: yellow;
 }
 
-#food2 {
+#arugula {
   background-color: green;
 }
 
-#food3 {
+#swine {
   background-color: brown;
 }
 
-#food4 {
+#biscuit {
   background-color: purple;
 }
 
