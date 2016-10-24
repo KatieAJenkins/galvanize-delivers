@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'roboto';
+  src:  url('Roboto-Bold.woff2') format('woff2'),
+        /*url('Roboto-Light.woff') format('woff');*/
+}
+
 .mainImage {
   background-image: url("../img/hero.jpg");
   background-size: 100% 500px;
@@ -23,39 +29,26 @@ h1 {
   color: #337ab7;
 }
 
-.menu {
-  background-color: blue;
-}
-
-.food {
-  border: 1px grey solid;
-}
-
-.order {
-  background-color: brown;
-}
-
 .totals {
   height: 150px;
   width: 150px;
   float: right;
 }
-#royale {
-  background-color: yellow;
+
+.food {
+  border: 1px gray solid;
+  width:300px;
+  height:350px;
+  margin:30px;
+  box-shadow: 5px 5px 15px gray;
 }
 
-#arugula {
-  background-color: green;
+img {
+  height:190px;
+  width:270px;
+  padding: 15px;
 }
 
-#swine {
-  background-color: brown;
-}
-
-#biscuit {
-  background-color: purple;
-}
-
-#galvanize {
-  font-size: 15px;
+h4 {
+  font-family: roboto, sans-serif;
 }
