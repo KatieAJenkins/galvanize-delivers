@@ -3,6 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>Galvanize Delivers</title>
+    <!--jQuery-->
+          <script
+      src="https://code.jquery.com/jquery-3.1.1.js"
+      integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+      crossorigin="anonymous"></script>
     <!-- Latest compiled and minified CSS -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -13,6 +18,11 @@
 
       <!-- Latest compiled and minified JavaScript -->
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+      <script src="js/bootstrap.js"></script>
+
+
+
   </head>
   <body>
 
@@ -42,34 +52,34 @@
     <div class = "menu col-lg-8"><h2>Menu</h2>
 
       <div class = "row">
-        <div class = "col-md-6 food" id ="royale">
+        <div class = "col-md-6 food">
           <img src="img/burger.jpg" alt="Royale With Cheese">
           <h4>Royale with Cheese</h4>
           <h5>$8.99</h5>
-          <button class="btn btn-default center-block btn-danger" type="submit">ADD TO ORDER</button>
+          <button class="btn btn-default center-block btn-danger add" id = "burger" type="submit">ADD TO ORDER</button>
         </div>
 
         <div class = "col-md-6 food" id ="arugula">
           <img src="img/pizza.jpg" alt="Arugula Pie">
           <h4>Arugula Pie</h4>
           <h5>$11.99</h5>
-          <button class="btn btn-default center-block btn-danger" type="submit">ADD TO ORDER</button>
+          <button class="btn btn-default center-block btn-danger add" id = "Arugula Pie" type="submit">ADD TO ORDER</button>
         </div>
       </div>
 
       <div class = "row">
         <div class = "col-md-6 food" id ="swine">
-          <img src="img/ribs.jpg" alt="Smoke Swine">
+          <img src="img/ribs.jpg" alt="Smoked Swine">
           <h4>Smoked Swine</h4>
           <h5>$14.99</h5>
-          <button class="btn btn-default center-block btn-danger" type="submit">ADD TO ORDER</button>
+          <button class="btn btn-default center-block btn-danger add" id = "Smoked Swine" type="submit">ADD TO ORDER</button>
         </div>
 
-        <div class = "col-md-6 food" id="biscuit">
+        <div class = "col-md-6 food" id="Ice Cream Biscuit">
           <img src="img/ice_cream.jpg" alt="Ice Cream Biscuit">
           <h4>Ice Cream Biscuit</h4>
           <h5>$7.99</h5>
-          <button class="btn btn-default center-block btn-danger" type="submit">ADD TO ORDER</button>
+          <button class="btn btn-default center-block btn-danger add" id ="Ice Cream Biscuit" type="submit">ADD TO ORDER</button>
         </div>
       </div>
     </div>
@@ -81,28 +91,40 @@
   <!--table -->
         <div class = "row">
           <div class = "table-responsive">
-            <table class = "table table-striped" id = "items">
-              <tr>
+            <table class = "table table-striped" id = "shoppingCart">
+              <thead>
+              <tr class="table head">
                 <th>Item</th>
                 <th>Price</th>
               </tr>
+            </thead>
 
+              <tbody>
+                
+              </tbody>
+
+            <tfoot>
               <tr>
-                <td>Food A</td>
-                <td>$1.00</td>
+                <td>Subtotal</td>
+                <td>Math</td>
               </tr>
 
               <tr>
-                <td>Food A</td>
-                <td>$1.00</td>
+                <td>Tax</td>
+                <td>Give this cell an id...append to these..float toward right</td>
               </tr>
 
+              <tr>
+                <td>Total</td>
+                <td>Math</td>
+              </tr>
+            </tfoot>
             </table>
           </div>
         </div>
 
 <!-- totals table -->
-        <div class = "row">
+        <!-- <div class = "row">
           <div class = "table-responsive">
             <table class = "table totals">
                 <tr>
@@ -122,7 +144,7 @@
 
             </table>
         </div>
-      </div>
+      </div> -->
 
 <!-- form -->
       <form>
