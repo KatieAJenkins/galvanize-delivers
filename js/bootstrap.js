@@ -2,7 +2,7 @@
 $( document ).ready(function() {
 var shoppingCart = $("#shoppingCart>tbody");
 var subtotalField = $("#subtotal");
-(console.log(subtotalField));
+// (console.log(subtotalField));
 
 
 // menuItems Object
@@ -36,8 +36,11 @@ var id = event.target.id;
 
 //append item name to shoppingCart
     if(id === "burger" ) {
+      //add foodItems to shoppingCart with Click to Order button
       shoppingCart.append('<tr><td>' + menuItems.burger.name + '</td><td>' + menuItems.burger.price + '</td></tr>');
-      subtotalField.append('<td>' + menuItems.burger.price + "</td>");
+      //add prices into subtotalField
+      var burgerPrice = subtotalField.append('<td>' + menuItems.burger.price + "</td>");
+      console.log(burgerPrice); //make burgerPrice into a variable so we can add all the price variables together...subtotal + target??? or .add()
 
 
     } else if (id === "pie" ) {
@@ -54,13 +57,6 @@ var id = event.target.id;
     }
   });
 
-
-//price into subtotal line
-
-
-
-
-//add additional items to subtotal
 
 //dynamically update subtotal//need var subtotal = 0;
 
