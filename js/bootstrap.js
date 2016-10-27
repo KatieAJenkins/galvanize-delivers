@@ -8,10 +8,15 @@ var menuItems = {
   burger : {
     name: "Royale with Cheese",
     price: 8.99
+  },
+
+  pie : {
+    name: "Arugula Pie",
+    price: 11.99
   }
+
 };
-// console.log(menuItems);
-// });
+
 
 //add event listener to add to order buttons
 $(".add" ).click( function() {
@@ -21,10 +26,13 @@ var id = event.target.id;
   if(id === "burger" ) {
     shoppingCart.append('<tr><td>' + menuItems.burger.name + '</td><td>' + menuItems.burger.price + '</td></tr>');
 
+  } else if (id === "pie" ) {
+    shoppingCart.append('<tr><td>' + menuItems.pie.name + '</td><td>' + menuItems.pie.price + '</td></tr>');
+
   } else {
     console.log("not burger");
-  }
-});
+    }
+  });
 });
 
 
