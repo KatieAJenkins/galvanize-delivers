@@ -46,8 +46,26 @@ var id = event.target.id;
       shoppingCart.append('<tr><td>' + menuItems.biscuit.name + '</td><td>' + menuItems.biscuit.price + '</td></tr>');
     }
   });
-});
 
+
+//price into subtotal line
+
+
+
+
+//add additional items to subtotal
+
+//dynamically update subtotal
+
+//calculate tax on subtotal
+
+//dynamically update tax in tax field
+
+//add tax and subtotal together for total field
+
+//show sum of tax and subtotal in total field
 
 
 //don't use replace with in calculations
+
+});
