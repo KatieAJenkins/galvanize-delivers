@@ -24,7 +24,7 @@ var menuItems = {
 
   biscuit : {
     name: "Ice Cream Biscuit",
-    price: 14.99
+    price: 7.99
   }
 
 };
@@ -50,7 +50,7 @@ var id = event.target.id;
 
     } else if (id === "biscuit" ) {
       shoppingCart.append('<tr><td>' + menuItems.biscuit.name + '</td><td>' + menuItems.biscuit.price + '</td></tr>');
-      // subtotalField.append('<td>' + menuItems.burger.price + "</td>");
+      subtotalField.append('<td>' + menuItems.biscuit.price + "</td>");
     }
   });
 
