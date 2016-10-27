@@ -3,7 +3,7 @@ $( document ).ready(function() {
 var shoppingCart = $("#shoppingCart>tbody");
 
 
-// menu object
+// menuItems Object
 var menuItems = {
   burger : {
     name: "Royale with Cheese",
@@ -18,6 +18,11 @@ var menuItems = {
   swine : {
     name: "Smoked Swine",
     price: 14.99
+  },
+
+  biscuit : {
+    name: "Ice Cream Biscuit",
+    price: 14.99
   }
 
 };
@@ -27,7 +32,7 @@ var menuItems = {
 $(".add" ).click( function() {
 var id = event.target.id;
 
-//append item name to table
+//append item name to shoppingCart
   if(id === "burger" ) {
     shoppingCart.append('<tr><td>' + menuItems.burger.name + '</td><td>' + menuItems.burger.price + '</td></tr>');
 
@@ -37,6 +42,9 @@ var id = event.target.id;
   } else if (id === "swine" ) {
     shoppingCart.append('<tr><td>' + menuItems.swine.name + '</td><td>' + menuItems.swine.price + '</td></tr>');
 
+  } else if (id === "biscuit" ) {
+    shoppingCart.append('<tr><td>' + menuItems.biscuit.name + '</td><td>' + menuItems.biscuit.price + '</td></tr>');
+    
   } else {
     console.log("not burger");
     }
