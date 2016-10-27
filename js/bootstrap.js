@@ -13,6 +13,11 @@ var menuItems = {
   pie : {
     name: "Arugula Pie",
     price: 11.99
+  },
+
+  swine : {
+    name: "Smoked Swine",
+    price: 14.99
   }
 
 };
@@ -28,6 +33,9 @@ var id = event.target.id;
 
   } else if (id === "pie" ) {
     shoppingCart.append('<tr><td>' + menuItems.pie.name + '</td><td>' + menuItems.pie.price + '</td></tr>');
+
+  } else if (id === "swine" ) {
+    shoppingCart.append('<tr><td>' + menuItems.swine.name + '</td><td>' + menuItems.swine.price + '</td></tr>');
 
   } else {
     console.log("not burger");
