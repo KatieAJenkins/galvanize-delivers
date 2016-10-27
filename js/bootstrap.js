@@ -1,6 +1,8 @@
 "use strict";
 $( document ).ready(function() {
 var shoppingCart = $("#shoppingCart>tbody");
+var subtotalField = $("#subtotal");
+(console.log(subtotalField));
 
 
 // menuItems Object
@@ -35,15 +37,20 @@ var id = event.target.id;
 //append item name to shoppingCart
     if(id === "burger" ) {
       shoppingCart.append('<tr><td>' + menuItems.burger.name + '</td><td>' + menuItems.burger.price + '</td></tr>');
+      subtotalField.append('<td>' + menuItems.burger.price + "</td>");
+
 
     } else if (id === "pie" ) {
       shoppingCart.append('<tr><td>' + menuItems.pie.name + '</td><td>' + menuItems.pie.price + '</td></tr>');
+      subtotalField.append('<td>' + menuItems.pie.price + "</td>");
 
     } else if (id === "swine" ) {
       shoppingCart.append('<tr><td>' + menuItems.swine.name + '</td><td>' + menuItems.swine.price + '</td></tr>');
+      subtotalField.append('<td>' + menuItems.swine.price + "</td>");
 
     } else if (id === "biscuit" ) {
       shoppingCart.append('<tr><td>' + menuItems.biscuit.name + '</td><td>' + menuItems.biscuit.price + '</td></tr>');
+      // subtotalField.append('<td>' + menuItems.burger.price + "</td>");
     }
   });
 
@@ -55,7 +62,7 @@ var id = event.target.id;
 
 //add additional items to subtotal
 
-//dynamically update subtotal
+//dynamically update subtotal//need var subtotal = 0;
 
 //calculate tax on subtotal
 
