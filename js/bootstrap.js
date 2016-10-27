@@ -36,24 +36,29 @@ var id = event.target.id;
 
 //append item name to shoppingCart
     if(id === "burger" ) {
-      //add foodItems to shoppingCart with Click to Order button
+      //add foodItems to shoppingCart
       shoppingCart.append('<tr><td>' + menuItems.burger.name + '</td><td>' + menuItems.burger.price + '</td></tr>');
       //add prices into subtotalField
-      var burgerPrice = subtotalField.append('<td>' + menuItems.burger.price + "</td>");
-      console.log(burgerPrice); //make burgerPrice into a variable so we can add all the price variables together...subtotal + target??? or .add()
+
+      var burgerSubTotal = parseFloat(toString(subtotalField.text(menuItems.burger.price)));
 
 
     } else if (id === "pie" ) {
       shoppingCart.append('<tr><td>' + menuItems.pie.name + '</td><td>' + menuItems.pie.price + '</td></tr>');
-      subtotalField.append('<td>' + menuItems.pie.price + "</td>");
+
+      var pieSubTotal = parseFloat(toString(subtotalField.text(menuItems.pie.price)));
+
 
     } else if (id === "swine" ) {
       shoppingCart.append('<tr><td>' + menuItems.swine.name + '</td><td>' + menuItems.swine.price + '</td></tr>');
       subtotalField.append('<td>' + menuItems.swine.price + "</td>");
 
+      var swineSubTotal = parseFloat(toString(subtotalField.text(menuItems.swine.price)));
+
+
     } else if (id === "biscuit" ) {
       shoppingCart.append('<tr><td>' + menuItems.biscuit.name + '</td><td>' + menuItems.biscuit.price + '</td></tr>');
-      subtotalField.append('<td>' + menuItems.biscuit.price + "</td>");
+      var biscuitSubTotal = parseFloat(toString(subtotalField.text(menuItems.biscuit.price)));
     }
   });
 
