@@ -33,20 +33,17 @@ $(".add" ).click( function() {
 var id = event.target.id;
 
 //append item name to shoppingCart
-  if(id === "burger" ) {
-    shoppingCart.append('<tr><td>' + menuItems.burger.name + '</td><td>' + menuItems.burger.price + '</td></tr>');
+    if(id === "burger" ) {
+      shoppingCart.append('<tr><td>' + menuItems.burger.name + '</td><td>' + menuItems.burger.price + '</td></tr>');
 
-  } else if (id === "pie" ) {
-    shoppingCart.append('<tr><td>' + menuItems.pie.name + '</td><td>' + menuItems.pie.price + '</td></tr>');
+    } else if (id === "pie" ) {
+      shoppingCart.append('<tr><td>' + menuItems.pie.name + '</td><td>' + menuItems.pie.price + '</td></tr>');
 
-  } else if (id === "swine" ) {
-    shoppingCart.append('<tr><td>' + menuItems.swine.name + '</td><td>' + menuItems.swine.price + '</td></tr>');
+    } else if (id === "swine" ) {
+      shoppingCart.append('<tr><td>' + menuItems.swine.name + '</td><td>' + menuItems.swine.price + '</td></tr>');
 
-  } else if (id === "biscuit" ) {
-    shoppingCart.append('<tr><td>' + menuItems.biscuit.name + '</td><td>' + menuItems.biscuit.price + '</td></tr>');
-    
-  } else {
-    console.log("not burger");
+    } else if (id === "biscuit" ) {
+      shoppingCart.append('<tr><td>' + menuItems.biscuit.name + '</td><td>' + menuItems.biscuit.price + '</td></tr>');
     }
   });
 });
