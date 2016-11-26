@@ -26,42 +26,83 @@ var menuItems = {
     name: "Ice Cream Biscuit",
     price: 7.99
   }
-
 };
-
 
 //add event listener to add to order buttons
 $(".add" ).click( function() {
 var id = event.target.id;
+console.log(id);
+var burgerName = menuItems.burger.name;
+var burgerPrice = menuItems.burger.price;
+console.log(burgerPrice);
 
-//append item name to shoppingCart
+//append item name to shoppingCart on Order bttn
     if(id === "burger" ) {
-      //add foodItems to shoppingCart
-      shoppingCart.append('<tr><td>' + menuItems.burger.name + '</td><td>' + menuItems.burger.price + '</td></tr>');
-      //add prices into subtotalField
+      shoppingCart.append('<tr><td>' + burgerName + '</td><td>' + burgerPrice + '</td></tr>');
 
-      var burgerSubTotal = parseFloat(toString(subtotalField.text(menuItems.burger.price)));
+//add prices into subtotalField
+
+//add burger price to sum
+          var sum = 0;
+          var price = $(".price").html();
+          console.log(price);
+
+          var subtotal = parseFloat(price);
+          console.log("subtotal = " + subtotal);
+
+          sum += parseFloat(subtotal) + parseFloat(price);
+          console.log(sum);
+
+          // $('.subtotal').text(subtotal);
+          //
+          // var sum = 0;
+          // $('.subtotal').each(function(){
+          //   sum += 8.99;
+          // });
+          // console.log(sum);
+
+          // var subTotal = subtotal += numPrice;
+          // console.log("newSubtotal= " + subtotal);
+          // console.log(newSubtotal);
+
+          // var subtotalField = $('.subtotal').text(subtotal);
+          // console.log('hi');
+
+
+
+      //   // $(".add").click(function (){
+      //     // sum = 0;
+      //     // sum += Number($(this).val());
+      //     // console.log(.text());
+      //   // });
+      // //
+      // var price = $('h5').val();
+      // console.log(price);
+      // var sum = 0;
+      // var sum = price;
+      // console.log(sum);
+
+
+      // sum += burgerPrice;
+      // var burgerPrice = subtotalField.append('<td>' + menuItems.burger.price + "</td>");
+      // console.log(menuItems.burger.price);
+       //make burgerPrice into a variable so we can add all the price variables together...subtotal + target??? or .add()
 
 
     } else if (id === "pie" ) {
       shoppingCart.append('<tr><td>' + menuItems.pie.name + '</td><td>' + menuItems.pie.price + '</td></tr>');
-
-      var pieSubTotal = parseFloat(toString(subtotalField.text(menuItems.pie.price)));
-
+      subtotalField.append('<td>' + menuItems.pie.price + "</td>");
 
     } else if (id === "swine" ) {
       shoppingCart.append('<tr><td>' + menuItems.swine.name + '</td><td>' + menuItems.swine.price + '</td></tr>');
       subtotalField.append('<td>' + menuItems.swine.price + "</td>");
 
-      var swineSubTotal = parseFloat(toString(subtotalField.text(menuItems.swine.price)));
-
-
     } else if (id === "biscuit" ) {
       shoppingCart.append('<tr><td>' + menuItems.biscuit.name + '</td><td>' + menuItems.biscuit.price + '</td></tr>');
-      var biscuitSubTotal = parseFloat(toString(subtotalField.text(menuItems.biscuit.price)));
+      subtotalField.append('<td>' + menuItems.biscuit.price + "</td>");
     }
   });
-
+});
 
 //dynamically update subtotal//need var subtotal = 0;
 
@@ -73,7 +114,4 @@ var id = event.target.id;
 
 //show sum of tax and subtotal in total field
 
-
 //don't use replace with in calculations
-
-});
