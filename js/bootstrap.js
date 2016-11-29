@@ -4,7 +4,6 @@ var shoppingCart = $("#shoppingCart>tbody");
 var subtotalField = $("#subtotal");
 // (console.log(subtotalField));
 
-
 // menuItems Object
 var menuItems = {
   burger : {
@@ -28,46 +27,53 @@ var menuItems = {
   }
 };
 
-//running subtotal
+//running subtotal outside of event listener
 var runningSubtotal = 0;
 
-
 //add event listener to add to order buttons
-$(".add" ).click( function() {
+$(".add" ).click(function(event) { //TO DO// Need to add object in??
+  console.log($(".price").val()); //TO DO//
 var id = event.target.id;
-console.log(id);
+// var price = event.target. //TO DO//
+// console.log(id);
+
 var burgerName = menuItems.burger.name;
 var burgerPrice = menuItems.burger.price;
-console.log(burgerPrice);
+// console.log(burgerPrice);
+var pieName = menuItems.pie.name;
+// console.log(pieName);
+var piePrice = menuItems.pie.price;
+// console.log(piePrice);
+var swinePrice = menuItems.swine.price;
+console.log(swinePrice);
+var swineName = menuItems.swine.name;
+console.log(swineName);
 
-//add prices into subtotalField
+//find price of food item
 var price = $(".price").html();
-console.log(price);
+// console.log(price);
 
+//add price to runningSubtotal
 runningSubtotal += parseFloat(price);
-console.log(runningSubtotal);
+//add runningSubtotal to screen
 subtotalField.text(runningSubtotal);
+// console.log(runningSubtotal);
 
 //append item name to shoppingCart on Order bttn
     if(id === "burger" ) {
       shoppingCart.append('<tr><td>' + burgerName + '</td><td>' + burgerPrice + '</td></tr>');
 
     } else if (id === "pie" ) {
-      shoppingCart.append('<tr><td>' + menuItems.pie.name + '</td><td>' + menuItems.pie.price + '</td></tr>');
-      // subtotalField.append('<td>' + menuItems.pie.price + "</td>");
+      shoppingCart.append('<tr><td>' + pieName + '</td><td>' + piePrice + '</td></tr>');
 
     } else if (id === "swine" ) {
       shoppingCart.append('<tr><td>' + menuItems.swine.name + '</td><td>' + menuItems.swine.price + '</td></tr>');
-      subtotalField.append('<td>' + menuItems.swine.price + "</td>");
 
     } else if (id === "biscuit" ) {
       shoppingCart.append('<tr><td>' + menuItems.biscuit.name + '</td><td>' + menuItems.biscuit.price + '</td></tr>');
-      subtotalField.append('<td>' + menuItems.biscuit.price + "</td>");
     }
   });
 });
-
-//dynamically update subtotal//need var subtotal = 0;
 
 //calculate tax on subtotal
 
