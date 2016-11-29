@@ -28,6 +28,10 @@ var menuItems = {
   }
 };
 
+//running subtotal
+var runningSubtotal = 0;
+
+
 //add event listener to add to order buttons
 $(".add" ).click( function() {
 var id = event.target.id;
@@ -36,62 +40,21 @@ var burgerName = menuItems.burger.name;
 var burgerPrice = menuItems.burger.price;
 console.log(burgerPrice);
 
+//add prices into subtotalField
+var price = $(".price").html();
+console.log(price);
+
+runningSubtotal += parseFloat(price);
+console.log(runningSubtotal);
+subtotalField.text(runningSubtotal);
+
 //append item name to shoppingCart on Order bttn
     if(id === "burger" ) {
       shoppingCart.append('<tr><td>' + burgerName + '</td><td>' + burgerPrice + '</td></tr>');
 
-//add prices into subtotalField
-
-//add burger price to sum
-          var sum = 0;
-          var price = $(".price").html();
-          console.log(price);
-
-          var subtotal = parseFloat(price);
-          console.log("subtotal = " + subtotal);
-
-          sum += parseFloat(subtotal) + parseFloat(price);
-          console.log(sum);
-
-          // $('.subtotal').text(subtotal);
-          //
-          // var sum = 0;
-          // $('.subtotal').each(function(){
-          //   sum += 8.99;
-          // });
-          // console.log(sum);
-
-          // var subTotal = subtotal += numPrice;
-          // console.log("newSubtotal= " + subtotal);
-          // console.log(newSubtotal);
-
-          // var subtotalField = $('.subtotal').text(subtotal);
-          // console.log('hi');
-
-
-
-      //   // $(".add").click(function (){
-      //     // sum = 0;
-      //     // sum += Number($(this).val());
-      //     // console.log(.text());
-      //   // });
-      // //
-      // var price = $('h5').val();
-      // console.log(price);
-      // var sum = 0;
-      // var sum = price;
-      // console.log(sum);
-
-
-      // sum += burgerPrice;
-      // var burgerPrice = subtotalField.append('<td>' + menuItems.burger.price + "</td>");
-      // console.log(menuItems.burger.price);
-       //make burgerPrice into a variable so we can add all the price variables together...subtotal + target??? or .add()
-
-
     } else if (id === "pie" ) {
       shoppingCart.append('<tr><td>' + menuItems.pie.name + '</td><td>' + menuItems.pie.price + '</td></tr>');
-      subtotalField.append('<td>' + menuItems.pie.price + "</td>");
+      // subtotalField.append('<td>' + menuItems.pie.price + "</td>");
 
     } else if (id === "swine" ) {
       shoppingCart.append('<tr><td>' + menuItems.swine.name + '</td><td>' + menuItems.swine.price + '</td></tr>');
