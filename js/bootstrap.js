@@ -31,10 +31,14 @@ var menuItems = {
 var runningSubtotal = 0;
 
 //add event listener to add to order buttons
-$(".add" ).click(function(event) { //TO DO// Need to add object in??
-  console.log($(".price").val()); //TO DO//
-var id = event.target.id;
-// var price = event.target. //TO DO//
+$(".add" ).click(function(event) {
+  console.log(event);
+  console.log(this);
+
+  console.log(($("#burger").siblings("h5").text()));
+
+  // console.log($(".price").val());
+// var id = event.target.id;
 // console.log(id);
 
 var burgerName = menuItems.burger.name;
@@ -45,12 +49,12 @@ var pieName = menuItems.pie.name;
 var piePrice = menuItems.pie.price;
 // console.log(piePrice);
 var swinePrice = menuItems.swine.price;
-console.log(swinePrice);
+// console.log(swinePrice);
 var swineName = menuItems.swine.name;
-console.log(swineName);
+// console.log(swineName);
 
 //find price of food item
-var price = $(".price").html();
+// var price = $(".price").html();
 // console.log(price);
 
 //add price to runningSubtotal
